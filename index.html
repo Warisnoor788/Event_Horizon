@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Event Horizon - Interactive Event Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1>Event Horizon</h1>
+        <p class="tag">Manage and explore upcoming events</p>
+      </div>
+    </header>
+
+    <main class="container main-grid">
+      <section class="controls">
+        <div class="search">
+          <input id="searchInput" type="search" placeholder="Search by name or date (YYYY-MM-DD)" />
+        </div>
+
+        <form id="eventForm" class="event-form" novalidate>
+          <h2>Add New Event</h2>
+          <div class="form-group">
+            <label for="name">Event Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="form-group">
+            <label for="date">Event Date</label>
+            <input id="date" name="date" type="date" required />
+          </div>
+          <div class="form-group">
+            <label for="description">Event Description</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button id="addBtn" type="submit" class="btn primary">Add Event</button>
+            <div id="formWarning" class="warning" aria-live="polite"></div>
+          </div>
+        </form>
+      </section>
+
+      <section class="events">
+        <h2>Events</h2>
+        <div id="eventsList" class="events-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>Waris Noor • 2026</span>
+        <a href="#" id="clearStorage" class="muted">Clear Saved Events</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
